@@ -10,7 +10,7 @@ public class Main {
         casa.stampaInfo();
         casa.setMetriQuadri(150);
         casa.setNumeroStanzeTotali(5);
-        System.out.println("\nIn questa casa ci sono " + casa.getMetriQuadri() + " bagni");
+        System.out.println("\nQuesta casa è di " + casa.getMetriQuadri() + " metri quadri");
 
         System.out.println("\n--------------------");
 
