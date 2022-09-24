@@ -5,3 +5,4 @@ Organizzazione contenuti:
 |   Contenuto   | Dove trovarlo |
 | :-------------: | :-------------: |
 |  Esercizi java Classroom 20/09/2022  |  "Classroom java 20-09-2022"  |
+|  Esercizio classe "Immobile"  |  "Esercizio classe immobile"  |
