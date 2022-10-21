@@ -9,4 +9,5 @@ Organizzazione contenuti:
 |  Esercizi java Classroom 04/10/2022  |  "Classroom java 04-10-2022"  |
 |  Esercizio classe "Computer"  |  "Esercizio classe computer"  |
 |  Esercizio "Conto corrente"  |  "Conto corrente"  |
+|  Esercizio classe "Numero"  |  "Esercizio classe numero"  |
 |  Esercizio classe "Aeroplano"  |  "Esercizio classe aeroplano"  |
