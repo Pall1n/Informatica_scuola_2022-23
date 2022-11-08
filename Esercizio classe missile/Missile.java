@@ -2,16 +2,20 @@ import java.io.IOException;
 
 public class Missile {
     private int[] map_coord = new int[2];
-    private int[] target_position = {(int) (Math.random() * map_coord[0]), (int) (Math.random() * map_coord[1])};
+    private int[] target_position = new int[2];
     private int[] old_position = new int[2];
     private int[] new_position = new int[2];
     private int speed;
+    private String tipo;
     private int move;
 
-    public Missile(int[] map_coord, int[] missile_position, int speed) {
+    public Missile(int[] map_coord, int[] missile_position, int speed, String tipo) {
         this.map_coord = map_coord;
         this.new_position = missile_position;
         this.speed = speed;
+        this.tipo = tipo;
+        this.target_position[0] = (int) (Math.random() * map_coord[0]);
+        this.target_position[1] = (int) (Math.random() * map_coord[1]);
     }
 
     public void launch() {
