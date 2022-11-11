@@ -12,3 +12,4 @@ Organizzazione contenuti:
 |  Esercizio classe "Numero"  |  "Esercizio classe numero"  |
 |  Esercizio classe "Aeroplano"  |  "Esercizio classe aeroplano"  |
 |  Esercizio classe "Missile"  |  "Esercizio classe missile"  |
+|  Esercizio agenzia immobiliare  |  "Esercizio agenzia immobiliare"  |
