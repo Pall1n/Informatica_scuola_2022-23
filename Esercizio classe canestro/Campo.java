@@ -4,15 +4,19 @@ public class Campo {
     private int[] griglia = new int[2];
     private Canestro canestro;
     private Palla palla;
+    private int[] coordinate_canestro;
+    private int[] coordinate_palla;
     private int mossa_palla;
+    private int speed_palla;
 
-    public Campo(int[] griglia) {
+    public Campo(int[] griglia, int speed_palla) {
         this.griglia = griglia;
+        this.speed_palla = speed_palla;
         this.canestro = new Canestro(griglia);
         this.palla = new Palla(griglia);
     }
 
-    public void launch() {
+    public void match() {
         new Thread() {
             public void run() {
                 final String os = System.getProperty("os.name");
@@ -61,58 +65,22 @@ public class Campo {
         new Thread() {
             public void run() {
                 while (true) {
-                    if ((new_position[0] == target_position[0] && new_position[1] == target_position[1])) {
-                        System.out.println("Target hitted! Coordinates: " + new_position[0] + ", " + new_position[1]);
+                    if (canestro.verifica_centro(palla.get_coordinate())) {
+                        System.out.println("Target hitted! Coordinates: " + palla.get_coordinate());
                         System.exit(0);
                     }
-                    switch(move) {
+                    switch(mossa_palla) {
                         case 0:
-                            old_position = new_position;
-                            if (new_position[0]+speed < map_coord[0]) {
-                                new_position[0] += speed;
-                            } else {
-                                new_position[0] = map_coord[0]-1;
-                                move = 1;
-                            }
-                            if (target_position[0] >= old_position[0] && target_position[0] <= new_position[0]) {;
-                                new_position[0] = target_position[0];
-                            }
+                            palla.muovi_sopra(speed_palla);
                             break;
                         case 1:
-                            old_position = new_position;
-                            if (new_position[0]-speed >= 0) {
-                                new_position[0] -= speed;
-                            } else {
-                                new_position[0] = 0;
-                                move = 0;
-                            }
-                            if (target_position[0] <= old_position[0] && target_position[0] >= new_position[0]) {;
-                                new_position[0] = target_position[0];
-                            }
+                            palla.muovi_sotto(speed_palla);
                             break;
                         case 2:
-                            old_position = new_position;
-                            if (new_position[1]+speed < map_coord[1]) {
-                                new_position[1] += speed;
-                            } else {
-                                new_position[1] = map_coord[1]-1;
-                                move = 3;
-                            }
-                            if (target_position[1] >= old_position[1] && target_position[1] <= new_position[1]) {;
-                                new_position[1] = target_position[1];
-                            }
+                            palla.muovi_destra(speed_palla);
                             break;
                         case 3:
-                            old_position = new_position;
-                            if (new_position[1]-speed >= 0) {
-                                new_position[1] -= speed;
-                            } else {
-                                new_position[1] = 0;
-                                move = 2;
-                            }
-                            if (target_position[1] >= old_position[1] && target_position[1] <= new_position[1]) {;
-                                new_position[1] = target_position[1];
-                            }
+                            palla.muovi_sinistra(speed_palla);
                             break;
                     }
                     
@@ -127,12 +95,14 @@ public class Campo {
     }
 
     private void printGame() {
-        for (int i = map_coord[1]-1; i >= 0; i--) {
-            for (int j = 0; j < map_coord[0]; j++) {
-                if (i == new_position[0] && j == new_position[1]) {
-                    System.out.print("^");
-                } else if (i == target_position[0] && j == target_position[1]) {
-                    System.out.print("x");
+        coordinate_canestro = canestro.getCoordinate_canestro();
+        coordinate_palla = palla.get_coordinate();
+        for (int i = griglia[1]-1; i >= 0; i--) {
+            for (int j = 0; j < griglia[0]; j++) {
+                if (i == coordinate_palla[0] && j == coordinate_palla[1]) {
+                    System.out.print("O");
+                } else if (i == coordinate_canestro[0] && j == coordinate_canestro[1]) {
+                    System.out.print("P");
                 } else {
                     System.out.print(" ");
                 }

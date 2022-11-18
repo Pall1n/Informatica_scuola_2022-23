@@ -11,4 +11,11 @@ public class Canestro {
     public int[] getCoordinate_canestro() {
         return coordinate_canestro;
     }
+
+    public boolean verifica_centro(int[] coordinate_palla) {
+        if(coordinate_palla == coordinate_canestro) {
+            return true;
+        }
+        return false;
+    }
 }
