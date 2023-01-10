@@ -1,10 +1,11 @@
 public class Palazzo {
+    private final String RESET_COLOR = "\u001B[0m";
     private int nPiani, mq, nCivico, cap;
     private String via, citta;
 
     public Palazzo(int nPiani, int mq, String via, int nCivico, String citta, int cap) {
-        this.nPiani = setNumPiani(nPiani);
-        this.mq = setMq(mq);
+        setNumPiani(nPiani);
+        setMq(mq);
         this.via = via;
         this.nCivico = nCivico;
         this.cap = cap;
@@ -35,11 +36,15 @@ public class Palazzo {
     }
 
     public void stampaInfo(float valMq) {
-        System.out.println("Indirizzo: " + via + " " + nCivico + ", " + citta + " (" + cap + ")");
-        System.out.println("Numero piani: " + nPiani);
-        System.out.println("Superficie: " + mq + " mq");
-        System.out.println("Valore complessivo: " + calcValore(valMq) + " euro");
-        System.out.println("Valore per singolo appartamento: " + calcValore(valMq) / nPiani + " euro");
+        System.out.println("\u001B[36mIndirizzo: \u001B[4;36m" + via + " " + nCivico + ", " + citta + " (" + cap + ")" + RESET_COLOR);
+        System.out.println("\u001B[34mNumero piani: \u001B[1;34m" + nPiani + RESET_COLOR);
+        System.out.println("\u001B[31mSuperficie: \u001B[1;31m" + mq + "\u001B[0;31m mq" + RESET_COLOR);
+        System.out.println("\u001B[32mValore complessivo: \u001B[1;32m" + calcValore(valMq) + "\u001B[0;32m euro");
+        System.out.println("Valore per singolo appartamento: \u001B[1;32m" + calcValore(valMq) / nPiani + "\u001B[0;32m euro" + RESET_COLOR);
+    }
+
+    public String getIndirizzo() {
+        return ("\u001B[1;36m" + via + " " + nCivico + ", " + citta + " (" + cap + ")" + RESET_COLOR);
     }
 
     public int getnPiani() {
@@ -64,9 +69,5 @@ public class Palazzo {
 
     public String getCitta() {
         return citta;
-    }
-
-    public String getIndirizzo() {
-        return (via + " " + nCivico + ", " + citta + " (" + cap + ")");
     }
 }
