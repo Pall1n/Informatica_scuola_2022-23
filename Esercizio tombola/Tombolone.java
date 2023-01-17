@@ -16,7 +16,43 @@ public class Tombolone {
     }
 
     public int verificaVincita(Boolean vincite_uscite[]) {
-        return 0;
+        int contatore = 0, vincita = -1, contatore_tot = 0;
+        for (int i = 0; i != 90; i+=30) {
+            for(int l = 0; l < 3; l++) {
+                for(int j = 1; j <= 5; j++) {
+                    if(numeri_estratti.contains(l * 10 + j + i)) {
+                        contatore++;
+                        contatore_tot++;
+                    }
+                }
+                if(contatore > 1 && vincite_uscite[(contatore - 1)] == false) {
+                    vincita = contatore - 1;
+                }
+                contatore = 0;
+            }
+            if(contatore_tot == 15) {
+                vincita = 0;
+            }
+            contatore_tot = 0;
+
+            for(int l = 0; l < 3; l++) {
+                for(int j = 6; j <= 10; j++) {
+                    if(numeri_estratti.contains(l * 10 + j + i)) {
+                        contatore++;
+                        contatore_tot++;
+                    }
+                }
+                if(contatore > 1 && vincite_uscite[(contatore - 1)] == false) {
+                    vincita = contatore - 1;
+                }
+                contatore = 0;
+            }
+            if(contatore_tot == 15) {
+                vincita = 0;
+            }
+            contatore_tot = 0;
+        }
+        return vincita;
     }
 
     public void stampaTombolone() {

@@ -70,36 +70,14 @@ public class Cartella {
                     contatore_tot++;
                 }
             }
-            switch (contatore) {
-                case 5:
-                    if(vincite_uscite[4] == false) {
-                        vincita = 4;
-                    }
-                    break;
-                case 4:
-                    if(vincite_uscite[3] == false) {
-                        vincita = 3;
-                    }
-                    break;
-                case 3:
-                    if(vincite_uscite[2] == false) {
-                        vincita = 2;
-                    }
-                    break;
-                case 2:
-                    if(vincite_uscite[1] == false) {
-                        vincita = 1;
-                    }
-                    break;
-                default:
-                    break;
+            if(contatore > 1 && vincite_uscite[(contatore - 1)] == false) {
+                vincita = contatore - 1;
+                break;
             }
             contatore = 0;
         }
         if(contatore_tot == 15) {
-            if(vincite_uscite[0] == false) {
-                vincita = 0;
-            }
+            vincita = 0;
         }
         return vincita;
     }

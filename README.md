@@ -13,3 +13,4 @@ Organizzazione contenuti:
 |  Esercizio classe "Aeroplano"  |  "Esercizio classe aeroplano"  |
 |  Esercizio classe "Missile"  |  "Esercizio classe missile"  |
 |  Esercizio agenzia immobiliare  |  "Esercizio agenzia immobiliare"  |
+|  Esercizio tombola  |  "Esercizio tombola"  |
