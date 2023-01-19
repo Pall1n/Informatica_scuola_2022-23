@@ -74,18 +74,18 @@ public class Main {
             }
 
             if(numeri_vincite.size() > 0 && vincita > -1) {
-                System.out.print("\u001B[1;31mHanno fatto " + vincite[vincita] + ": ");
+                System.out.print("Hanno fatto \u001B[1;31m" + vincite[vincita] + "\u001B[0m: ");
                 for (int i = 0; i < numeri_vincite.size(); i++) {
                     if(numeri_vincite.get(i) == -1) {
-                        System.out.print("Tombolone");
+                        System.out.print("\u001B[36mTombolone\u001B[0m");
                     } else {
-                        System.out.print("Cartella " + (numeri_vincite.get(i) + 1));
+                        System.out.print("\u001B[36mCartella " + (numeri_vincite.get(i) + 1) + "\u001B[0m");
                     }
                     if(i != numeri_vincite.size() - 1) {
                         System.out.print(", ");
                     }
                 }
-                System.out.println("\u001B[0m");
+                System.out.println();
                 vincite_uscite[vincita] = true;
             }
 

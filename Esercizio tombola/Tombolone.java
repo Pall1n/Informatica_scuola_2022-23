@@ -61,9 +61,9 @@ public class Tombolone {
         for(int i = 1; i <= 90; i++) {
             if(numeri_estratti.contains(i)) {
                 if(i < 10) {
-                    System.out.print("X  ");
+                    System.out.print("\u001B[36mX  \u001B[0m");
                 } else {
-                    System.out.print("XX ");
+                    System.out.print("\u001B[36mXX \u001B[0m");
                 }
             } else {
                 if(i < 10) {
