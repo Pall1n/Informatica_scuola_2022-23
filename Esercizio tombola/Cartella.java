@@ -26,7 +26,7 @@ public class Cartella {
             }
         }
 
-        int numero, decina, row;
+        int numero, decina;
 
         for (int i = 0; i < 15; i++) {
             numero = numeri.get(i);
@@ -35,25 +35,20 @@ public class Cartella {
             if (numero % 10 == 0) {
                 decina--;
             }
-            do {
-                row = 0;
-                for (int j = 0; j < 3; j++) {
-                    contatore = 0;
-                    for(int l = 0; l < 9; l++) {
-                        if (numeri_ordinati[j][l] != 0) {
-                            contatore++;
-                        }
-                    }
-                    if (contatore < 5) {
-                        if (numeri_ordinati[j][decina] == 0) {
-                            numeri_ordinati[j][decina] = numero;
-                            break;
-                        } else {
-                            row = j;
-                        }
+            for (int j = 0; j < 3; j++) {
+                contatore = 0;
+                for(int l = 0; l < 9; l++) {
+                    if (numeri_ordinati[j][l] != 0) {
+                        contatore++;
                     }
                 }
-                if (row == 2) {
+                if (contatore < 5) {
+                    if (numeri_ordinati[j][decina] == 0) {
+                        numeri_ordinati[j][decina] = numero;
+                        break;
+                    }
+                }
+                if (j == 2) {
                     int where_to_move = 0;
                     for(int k = 0; k < 3; k++) {
                         if(numeri_ordinati[k][decina] == 0) {
@@ -65,11 +60,12 @@ public class Cartella {
                         if(numeri_ordinati[where_to_move][k] != 0 && numeri_ordinati[2][k] == 0) {
                             numeri_ordinati[2][k] = numeri_ordinati[where_to_move][k];
                             numeri_ordinati[where_to_move][k] = 0;
+                            numeri_ordinati[where_to_move][decina] = numero;
                             break;
                         }
                     }
-                }
-            } while (row == 2);
+				}
+            }
         }
     }
 
