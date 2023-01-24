@@ -19,12 +19,4 @@ public class Triangolo extends Forma {
         }
         super.area = base*altezza/2;
     }
-
-    public double perimetro() {
-        return super.perimetro;
-    }
-
-    public double area() {
-        return super.area;
-    }
 }
