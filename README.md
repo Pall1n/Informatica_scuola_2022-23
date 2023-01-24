@@ -14,3 +14,4 @@ Organizzazione contenuti:
 |  Esercizio classe "Missile"  |  "Esercizio classe missile"  |
 |  Esercizio agenzia immobiliare  |  "Esercizio agenzia immobiliare"  |
 |  Esercizio tombola  |  "Esercizio tombola"  |
+|  Esercizio animale  |  "Esercizio animale"  |
