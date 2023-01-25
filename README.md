@@ -16,3 +16,4 @@ Organizzazione contenuti:
 |  Esercizio tombola  |  "Esercizio tombola"  |
 |  Esercizio forma geometrica  |  "Esercizio forma"  |
 |  Esercizio animale  |  "Esercizio animale"  |
+|  Esercizio matematica  |  "Esercizio matematica overloading"  |
