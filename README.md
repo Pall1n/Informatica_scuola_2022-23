@@ -17,3 +17,4 @@ Organizzazione contenuti:
 |  Esercizio forma geometrica  |  "Esercizio forma"  |
 |  Esercizio animale  |  "Esercizio animale"  |
 |  Esercizio matematica  |  "Esercizio matematica overloading"  |
+|  Esercizi GUI input/output  |  "Esercizi GUI input-output"  |
