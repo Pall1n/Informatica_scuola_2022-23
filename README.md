@@ -19,3 +19,4 @@ Organizzazione contenuti:
 |  Esercizio matematica  |  "Esercizio matematica overloading"  |
 |  Esercizio classe astratta  |  "Esercizio classe astratta"  |
 |  Esercizi GUI input/output  |  "Esercizi GUI input-output"  |
+|  Esercizio agenzia finanziaria  |  "Esercizio agenzia finanziaria"  |
