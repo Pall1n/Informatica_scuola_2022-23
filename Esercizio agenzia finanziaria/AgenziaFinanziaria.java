@@ -38,7 +38,7 @@ public class AgenziaFinanziaria extends JFrame {
                 if(somma_temp == 0)
                     break;
                 distribuzioni[i][j] = Math.round((random.nextDouble() * somma_temp) * 100.0) / 100.0;
-                rendimento[i][j] = Math.round(distribuzioni[i][j] * rendimentoAnnuo[j] * 100) / 100;
+                rendimento[i][j] = Math.round((distribuzioni[i][j] + distribuzioni[i][j] /100 * rendimentoAnnuo[j]) * 100) / 100;
                 somma_temp -= Math.round(distribuzioni[i][j] * 100.0) / 100.0;
                 distribuzioni[i][j] += 2000;
             }
