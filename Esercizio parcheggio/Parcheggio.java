@@ -23,7 +23,13 @@ public class Parcheggio {
         return false;
     }
 
-    public Veicolo[] getParcheggio() {
-        return parcheggio;
+    public void getParcheggio() {
+        for (int i = 0; i < parcheggio.length; i++) {
+            if (parcheggio[i] != null) {
+                System.out.println(i + ") " + parcheggio[i].toString());
+            } else {
+                System.out.println(i + ") Posto vuoto");
+            }
+        }
     }
 }
