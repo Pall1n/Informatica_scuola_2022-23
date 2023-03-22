@@ -25,7 +25,6 @@ public class Magazzino extends JFrame {
         super("Magazzino");
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setSize(500, 200);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLayout(new FlowLayout());
         panel = new JPanel();
         panel.setLayout(new GridLayout(4, 1));
