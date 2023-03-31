@@ -9,7 +9,6 @@ public class GUI extends JFrame{
         super("Base-Altezza");
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setSize(200, 140);
-        setLayout(new FlowLayout());
         panel = new JPanel();
         panel.setLayout(new GridLayout(3, 2));
         JLabel baseText = new JLabel("Base: ");
