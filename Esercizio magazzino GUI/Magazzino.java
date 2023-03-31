@@ -16,7 +16,6 @@ import java.util.Date;
 import java.util.ArrayList;
 
 public class Magazzino extends JFrame {
-    private static final long serialVersionUID = 1L;
     private JPanel panel;
     private JButton btn1, btn2, btn3, btn4;
     private ArrayList<Merce> magazzino = new ArrayList<Merce>();
