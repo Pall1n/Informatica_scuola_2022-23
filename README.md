@@ -20,3 +20,8 @@ Organizzazione contenuti:
 |  Esercizio classe astratta  |  "Esercizio classe astratta"  |
 |  Esercizi GUI input/output  |  "Esercizi GUI input-output"  |
 |  Esercizio agenzia finanziaria  |  "Esercizio agenzia finanziaria"  |
+|  Esercizi classi abstract  |  "Classroom java 08-02-2023"  |
+|  Esercizio Ereditarietà  |  "Esercizio parcheggio"  |
+|  Gestione magazzino  |  "Esercizio magazzino GUI"  |
+|  Implementazione GUI calcolo area  |  "Esercizio base-altezza GUI"  |
+|  Esercizi GUI  |  "Classroom java 16-05-2023"  |
